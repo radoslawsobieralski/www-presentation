@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap");
+
+:root {
+  --page-1-color: #6fdcbf;
+  --page-2-color: #f2c3c0;
+  --page-3-color: #ae8fdb;
+  --page-4-color: #fef8b4;
+  --text-color: #404040;
+  --btn-background: #f7f7f7;
+  --btn-background-dark: #cccccc;
+  --btn-border-color: #404040;
+  --animation-speed: 1.2s;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.4;
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+#page-1 {
+  background: var(--page-1-color);
+}
+
+#page-2 {
+  background: var(--page-2-color);
+}
+
+#page-3 {
+  background: var(--page-3-color);
+}
+
+#page-4 {
+  background: var(--page-4-color);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  padding: 0 4rem;
+}
+
+.page h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 1.5rem;
+}
+
+.page p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--btn-background);
+  border: 3px var(--btn-border-color) solid;
+  box-shadow: 4px 4px var(--btn-border-color);
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease-in;
+  margin: 0.5rem 1rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: var(--btn-background-dark);
+}
+
+i {
+  margin-left: 0.5rem;
+}
+
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation: heading var(--animation-speed) forwards ease-in-out;
+}
+
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+#page-1 p {
+  transform: translateX(-1800px);
+  animation: paragraph var(--animation-speed) forwards ease-in-out 1s;
+}
+
+@keyframes paragraph {
+  to {
+    transform: translateX(0);
+  }
+}
+
+#page-1 .btn {
+  transform: translateX(1800px);
+  animation: button var(--animation-speed) forwards ease-in-out 2s;
+}
+
+@keyframes button {
+  to {
+    transform: translateX(0);
+  }
+}
