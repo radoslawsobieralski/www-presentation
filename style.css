@@ -100,7 +100,7 @@ i {
 }
 
 #page-1 p {
-  transform: translateX(-1800px);
+  transform: translateX(-2000px);
   animation: paragraph var(--animation-speed) forwards ease-in-out 1s;
 }
 
